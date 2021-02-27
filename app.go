@@ -92,6 +92,7 @@ func (a *App) UpdateProduct(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusBadRequest, "Provide valid id")
 		return
 	}
+
 	var product Product
 	product.ID = id
 	decoder := json.NewDecoder(r.Body)

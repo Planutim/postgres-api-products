@@ -132,7 +132,7 @@ func TestUpdateProduct(t *testing.T) {
 	var originalProduct map[string]interface{}
 	json.Unmarshal(response.Body.Bytes(), &originalProduct)
 
-	var jsonStr = []byte(`{"name":test product - updated name", "price": 11.22}`)
+	var jsonStr = []byte(`{"name":"test product - updated name", "price": 11.22}`)
 	req, _ = http.NewRequest("PUT", "http://localhost:8080/products/1", bytes.NewBuffer(jsonStr))
 	req.Header.Set("Content-Type", "application/json")
 
