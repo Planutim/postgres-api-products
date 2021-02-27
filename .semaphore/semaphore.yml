@@ -8,9 +8,6 @@ blocks:
   - name: Test
     task:
       jobs:
-        - name: sem-service start postgres
-          commands:
-            - sem-service start postgres
         - name: go test
           commands:
             - sem-version go 1.11
